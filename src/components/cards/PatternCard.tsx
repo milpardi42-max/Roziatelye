@@ -6,7 +6,7 @@ import { getArtist, getStyle, type Pattern } from "@/lib/data";
 import { Badge } from "@/components/ui/Badge";
 
 export function PatternCard({ pattern }: { pattern: Pattern }) {
-  const { t, lang, dir } = useI18n();
+  const { t, lang } = useI18n();
   const { format } = useCurrency();
   const [fav, setFav] = useState(false);
   const artist = getArtist(pattern.artistSlug);

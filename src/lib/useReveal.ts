@@ -5,6 +5,8 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
   options?: { threshold?: number; rootMargin?: string; delay?: number }
 ) {
   const ref = useRef<T>(null);
+  const { threshold = 0.08, rootMargin = "0px 0px -48px 0px", delay = 0 } = options ?? {};
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -16,10 +18,10 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            if (options?.delay) {
+            if (delay) {
               setTimeout(() => {
                 e.target.classList.add("is-visible");
-              }, options.delay);
+              }, delay);
             } else {
               e.target.classList.add("is-visible");
             }
@@ -28,12 +30,12 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
         }
       },
       {
-        threshold: options?.threshold ?? 0.08,
-        rootMargin: options?.rootMargin ?? "0px 0px -48px 0px",
+        threshold,
+        rootMargin,
       },
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold, rootMargin, delay]);
   return ref;
 }

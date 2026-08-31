@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { asset } from "@/lib/assets";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
-  const { t, dir } = useI18n();
+  const { t } = useI18n();
 
   return (
     <section className="relative overflow-hidden bg-white">
       {/* Background image — full bleed, high opacity */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero/hero-background.png"
+          src={asset("/images/hero/hero-background.png")}
           alt=""
           className="h-full w-full object-cover"
         />

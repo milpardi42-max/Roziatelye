@@ -13,7 +13,7 @@ export function ProductCard({
   product: Product;
   onQuickView?: (p: Product) => void;
 }) {
-  const { t, lang, dir } = useI18n();
+  const { t, lang } = useI18n();
   const { format } = useCurrency();
   const { add } = useCart();
   const [fav, setFav] = useState(false);

@@ -3,6 +3,8 @@
    Typed content consumed across the marketplace, store, and academy.
    ============================================================ */
 
+import { asset } from "@/lib/assets";
+
 export type Category = {
   slug: string;
   name: string;
@@ -131,7 +133,7 @@ export const categories: Category[] = [
     name: "Home Décor",
     nameFa: "دکوراسیون خانه",
     description: "Cushions, throws, and objects that bring pattern into the room.",
-    image: "/images/categories/home-decor.jpg",
+    image: asset("/images/categories/home-decor.jpg"),
     count: 48,
   },
   {
@@ -139,7 +141,7 @@ export const categories: Category[] = [
     name: "Rugs & Textiles",
     nameFa: "فرش و پارچه",
     description: "Handwoven rugs and textile art from independent workshops.",
-    image: "/images/categories/rugs-textiles.jpg",
+    image: asset("/images/categories/rugs-textiles.jpg"),
     count: 32,
   },
   {
@@ -147,7 +149,7 @@ export const categories: Category[] = [
     name: "Ceramics",
     nameFa: "سرامیک",
     description: "Vases, vessels, and tableware shaped by hand.",
-    image: "/images/categories/ceramics.jpg",
+    image: asset("/images/categories/ceramics.jpg"),
     count: 27,
   },
   {
@@ -155,7 +157,7 @@ export const categories: Category[] = [
     name: "Wall Art",
     nameFa: "هنر دیواری",
     description: "Patterned prints and woven hangings for the wall.",
-    image: "/images/categories/wall-art.jpg",
+    image: asset("/images/categories/wall-art.jpg"),
     count: 21,
   },
 ];
@@ -166,28 +168,28 @@ export const styles: Style[] = [
     name: "Geometric",
     nameFa: "هندسی",
     description: "Order, rhythm, and repetition.",
-    image: "/images/styles/geometric.jpg",
+    image: asset("/images/styles/geometric.jpg"),
   },
   {
     slug: "organic",
     name: "Organic",
     nameFa: "ارگانیک",
     description: "Soft, flowing, natural forms.",
-    image: "/images/styles/organic.jpg",
+    image: asset("/images/styles/organic.jpg"),
   },
   {
     slug: "batik",
     name: "Batik",
     nameFa: "باتیک",
     description: "Traditional resist-dye patterns.",
-    image: "/images/styles/batik.jpg",
+    image: asset("/images/styles/batik.jpg"),
   },
   {
     slug: "minimal",
     name: "Minimal",
     nameFa: "مینیمال",
     description: "Quiet, restrained, essential.",
-    image: "/images/styles/minimal.jpg",
+    image: asset("/images/styles/minimal.jpg"),
   },
 ];
 
@@ -199,8 +201,8 @@ export const artists: Artist[] = [
     profession: "Textile Designer",
     professionFa: "طراح پارچه",
     location: "Tehran, IR",
-    avatar: "/images/artists/leila-mostofi-avatar.jpg",
-    cover: "/images/artists/leila-mostofi-cover.jpg",
+    avatar: asset("/images/artists/leila-mostofi-avatar.jpg"),
+    cover: asset("/images/artists/leila-mostofi-cover.jpg"),
     bio: "Leila works at the intersection of Persian textile heritage and contemporary geometry. Her patterns have been licensed by hospitality groups across Europe and the Middle East.",
     bioFa:
       "لیلا در تلاقی میراث پارچه‌ای ایران و هندسه معاصر کار می‌کند. طرح‌های او توسط گروه‌های مهمان‌نوازی در اروپا و خاورمیانه لایسنس شده است.",
@@ -221,8 +223,8 @@ export const artists: Artist[] = [
     profession: "Ceramicist",
     professionFa: "سرامیک‌ساز",
     location: "Isfahan, IR",
-    avatar: "/images/artists/amir-rezvani-avatar.jpg",
-    cover: "/images/artists/amir-rezvani-cover.jpg",
+    avatar: asset("/images/artists/amir-rezvani-avatar.jpg"),
+    cover: asset("/images/artists/amir-rezvani-cover.jpg"),
     bio: "Amir draws on Isfahan's blue-tile tradition to create vessels that feel both ancient and modern. Each piece is wheel-thrown and glazed in his studio workshop.",
     bioFa:
       "امیر از سنت کاشی‌کاری آبی اصفهان وام می‌گیرد و ظروفی می‌سازد که کهن و نو به نظر می‌رسند. هر قطعه روی چرخ ساخته و در کارگاهش لعاب‌کاری می‌شود.",
@@ -242,8 +244,8 @@ export const artists: Artist[] = [
     profession: "Pattern Designer",
     professionFa: "طراح الگو",
     location: "Lisbon, PT",
-    avatar: "/images/artists/sara-ahmadi-avatar.jpg",
-    cover: "/images/artists/sara-ahmadi-cover.jpg",
+    avatar: asset("/images/artists/sara-ahmadi-avatar.jpg"),
+    cover: asset("/images/artists/sara-ahmadi-cover.jpg"),
     bio: "Sara's batik-inspired patterns bridge West African technique with Mediterranean palette. She teaches surface design at the Patrão Academy.",
     bioFa:
       "الگوهای الهام‌گرفته از باتیک سارا، تکنیک غرب آفریقا را با پالت مدیترانه‌ای پیوند می‌دهد. او طراحی سطح را در آکادمی پاترائو آموزش می‌دهد.",
@@ -263,8 +265,8 @@ export const artists: Artist[] = [
     profession: "Weaver",
     professionFa: "بافنده",
     location: "Kashan, IR",
-    avatar: "/images/artists/matin-karimi-avatar.jpg",
-    cover: "/images/artists/matin-karimi-cover.jpg",
+    avatar: asset("/images/artists/matin-karimi-avatar.jpg"),
+    cover: asset("/images/artists/matin-karimi-cover.jpg"),
     bio: "Matin weaves on a traditional loom in Kashan, producing rugs that reinterpret classical motifs for contemporary interiors. He mentors three apprentices.",
     bioFa:
       "متین روی یک دستگاه سنتی در کاشان بافت می‌کند و فرش‌هایی می‌سازد که نقش‌مoteهای کلاسیک را برای فضاهای معاصر بازتفسیر می‌کنند. او سه شاگرد دارد.",
@@ -285,7 +287,7 @@ export const patterns: Pattern[] = [
     category: "home-decor",
     style: "geometric",
     colors: ["Natural", "Copper"],
-    image: "/images/patterns/lattice-bloom.jpg",
+    image: asset("/images/patterns/lattice-bloom.jpg"),
     price: 120,
     trending: true,
     bestSeller: true,
@@ -304,7 +306,7 @@ export const patterns: Pattern[] = [
     category: "rugs-textiles",
     style: "batik",
     colors: ["Indigo", "Ivory"],
-    image: "/images/patterns/indigo-resist.jpg",
+    image: asset("/images/patterns/indigo-resist.jpg"),
     price: 140,
     trending: true,
     bestSeller: false,
@@ -323,7 +325,7 @@ export const patterns: Pattern[] = [
     category: "home-decor",
     style: "geometric",
     colors: ["Copper", "Slate"],
-    image: "/images/patterns/copper-weave.jpg",
+    image: asset("/images/patterns/copper-weave.jpg"),
     price: 95,
     trending: false,
     bestSeller: true,
@@ -342,7 +344,7 @@ export const patterns: Pattern[] = [
     category: "rugs-textiles",
     style: "organic",
     colors: ["Terracotta", "Sage"],
-    image: "/images/patterns/kashan-garden.jpg",
+    image: asset("/images/patterns/kashan-garden.jpg"),
     price: 210,
     trending: true,
     bestSeller: false,
@@ -361,7 +363,7 @@ export const patterns: Pattern[] = [
     category: "home-decor",
     style: "minimal",
     colors: ["Ivory", "Slate"],
-    image: "/images/patterns/minimal-stripe.jpg",
+    image: asset("/images/patterns/minimal-stripe.jpg"),
     price: 70,
     trending: false,
     bestSeller: true,
@@ -380,7 +382,7 @@ export const patterns: Pattern[] = [
     category: "ceramics",
     style: "geometric",
     colors: ["Cobalt", "White"],
-    image: "/images/patterns/vessel-grid.jpg",
+    image: asset("/images/patterns/vessel-grid.jpg"),
     price: 160,
     trending: false,
     bestSeller: false,
@@ -399,7 +401,7 @@ export const patterns: Pattern[] = [
     category: "wall-art",
     style: "organic",
     colors: ["Blush", "Sage"],
-    image: "/images/patterns/soft-bloom.jpg",
+    image: asset("/images/patterns/soft-bloom.jpg"),
     price: 110,
     trending: true,
     bestSeller: false,
@@ -418,7 +420,7 @@ export const patterns: Pattern[] = [
     category: "rugs-textiles",
     style: "geometric",
     colors: ["Multi"],
-    image: "/images/patterns/market-weave.jpg",
+    image: asset("/images/patterns/market-weave.jpg"),
     price: 130,
     trending: false,
     bestSeller: true,
@@ -446,9 +448,9 @@ export const products: Product[] = [
     colorFa: "طبیعی",
     price: 68,
     images: [
-      "/images/products/lattice-bloom-cushion/image-1.jpg",
-      "/images/products/lattice-bloom-cushion/image-2.jpg",
-      "/images/products/lattice-bloom-cushion/image-3.jpg",
+      asset("/images/products/lattice-bloom-cushion/image-1.jpg"),
+      asset("/images/products/lattice-bloom-cushion/image-2.jpg"),
+      asset("/images/products/lattice-bloom-cushion/image-3.jpg"),
     ],
     patternSlug: "lattice-bloom",
     artistSlug: "leila-mostofi",
@@ -489,8 +491,8 @@ export const products: Product[] = [
     price: 145,
     salePrice: 124,
     images: [
-      "/images/products/indigo-resist-throw/image-1.jpg",
-      "/images/products/indigo-resist-throw/image-2.jpg",
+      asset("/images/products/indigo-resist-throw/image-1.jpg"),
+      asset("/images/products/indigo-resist-throw/image-2.jpg"),
     ],
     patternSlug: "indigo-resist",
     artistSlug: "sara-ahmadi",
@@ -528,8 +530,8 @@ export const products: Product[] = [
     colorFa: "اخرایی",
     price: 890,
     images: [
-      "/images/products/kashan-garden-rug/image-1.jpg",
-      "/images/products/kashan-garden-rug/image-2.jpg",
+      asset("/images/products/kashan-garden-rug/image-1.jpg"),
+      asset("/images/products/kashan-garden-rug/image-2.jpg"),
     ],
     patternSlug: "kashan-garden",
     artistSlug: "matin-karimi",
@@ -567,8 +569,8 @@ export const products: Product[] = [
     colorFa: "کبالت",
     price: 92,
     images: [
-      "/images/products/vessel-grid-vase/image-1.jpg",
-      "/images/products/vessel-grid-vase/image-2.jpg",
+      asset("/images/products/vessel-grid-vase/image-1.jpg"),
+      asset("/images/products/vessel-grid-vase/image-2.jpg"),
     ],
     patternSlug: "vessel-grid",
     artistSlug: "amir-rezvani",
@@ -606,8 +608,8 @@ export const products: Product[] = [
     colorFa: "مسین",
     price: 58,
     images: [
-      "/images/products/copper-weave-cushion/image-1.jpg",
-      "/images/products/copper-weave-cushion/image-2.jpg",
+      asset("/images/products/copper-weave-cushion/image-1.jpg"),
+      asset("/images/products/copper-weave-cushion/image-2.jpg"),
     ],
     patternSlug: "copper-weave",
     artistSlug: "leila-mostofi",
@@ -646,8 +648,8 @@ export const products: Product[] = [
     colorFa: "عاج",
     price: 62,
     images: [
-      "/images/products/minimal-stripe-cushion/image-1.jpg",
-      "/images/products/minimal-stripe-cushion/image-2.jpg",
+      asset("/images/products/minimal-stripe-cushion/image-1.jpg"),
+      asset("/images/products/minimal-stripe-cushion/image-2.jpg"),
     ],
     patternSlug: "minimal-stripe",
     artistSlug: "sara-ahmadi",
@@ -685,7 +687,7 @@ export const products: Product[] = [
     colorFa: "صورتی",
     price: 78,
     images: [
-      "/images/products/soft-bloom-print/image-1.jpg",
+      asset("/images/products/soft-bloom-print/image-1.jpg"),
     ],
     patternSlug: "soft-bloom",
     artistSlug: "leila-mostofi",
@@ -723,8 +725,8 @@ export const products: Product[] = [
     colorFa: "چندرنگ",
     price: 175,
     images: [
-      "/images/products/market-weave-pouf/image-1.jpg",
-      "/images/products/market-weave-pouf/image-2.jpg",
+      asset("/images/products/market-weave-pouf/image-1.jpg"),
+      asset("/images/products/market-weave-pouf/image-2.jpg"),
     ],
     patternSlug: "market-weave",
     artistSlug: "matin-karimi",
@@ -754,11 +756,11 @@ export const portfolios: Portfolio[] = [
     titleFa: "لابی برج طاهر",
     artistSlug: "leila-mostofi",
     category: "Hospitality",
-    cover: "/images/portfolios/tahir-tower-lobby/cover.jpg",
+    cover: asset("/images/portfolios/tahir-tower-lobby/cover.jpg"),
     gallery: [
-      "/images/portfolios/tahir-tower-lobby/cover.jpg",
-      "/images/portfolios/tahir-tower-lobby/gallery-2.jpg",
-      "/images/portfolios/tahir-tower-lobby/gallery-3.jpg",
+      asset("/images/portfolios/tahir-tower-lobby/cover.jpg"),
+      asset("/images/portfolios/tahir-tower-lobby/gallery-2.jpg"),
+      asset("/images/portfolios/tahir-tower-lobby/gallery-3.jpg"),
     ],
     overview:
       "A 400-square-meter hotel lobby furnished with custom Lattice Bloom cushions, Kashan Garden runners, and Vessel Grid ceramics.",
@@ -779,10 +781,10 @@ export const portfolios: Portfolio[] = [
     titleFa: "اقامتگاه کارگاهی",
     artistSlug: "sara-ahmadi",
     category: "Residential",
-    cover: "/images/portfolios/sara-studio-retreat/cover.jpg",
+    cover: asset("/images/portfolios/sara-studio-retreat/cover.jpg"),
     gallery: [
-      "/images/portfolios/sara-studio-retreat/cover.jpg",
-      "/images/portfolios/sara-studio-retreat/gallery-2.jpg",
+      asset("/images/portfolios/sara-studio-retreat/cover.jpg"),
+      asset("/images/portfolios/sara-studio-retreat/gallery-2.jpg"),
     ],
     overview:
       "A Lisbon artist's retreat layered with Indigo Resist throws, Minimal Stripe cushions, and Soft Bloom wall prints.",
@@ -803,10 +805,10 @@ export const portfolios: Portfolio[] = [
     titleFa: "خانه دستگاه",
     artistSlug: "matin-karimi",
     category: "Commercial",
-    cover: "/images/portfolios/matin-loom-house/cover.jpg",
+    cover: asset("/images/portfolios/matin-loom-house/cover.jpg"),
     gallery: [
-      "/images/portfolios/matin-loom-house/cover.jpg",
-      "/images/portfolios/matin-loom-house/gallery-2.jpg",
+      asset("/images/portfolios/matin-loom-house/cover.jpg"),
+      asset("/images/portfolios/matin-loom-house/gallery-2.jpg"),
     ],
     overview:
       "A working rug workshop and showroom in Kashan, with Market Weave poufs and a Kashan Garden rug on the floor.",
@@ -833,7 +835,7 @@ export const courses: Course[] = [
     level: "Beginner",
     duration: "4h 20m",
     episodes: 12,
-    cover: "/images/courses/pattern-design-fundamentals.jpg",
+    cover: asset("/images/courses/pattern-design-fundamentals.jpg"),
     overview:
       "Build a repeatable pattern from a single motif. Leila covers grid systems, color, and hand-drawn repeats you can license.",
     overviewFa:
@@ -852,7 +854,7 @@ export const courses: Course[] = [
     level: "Intermediate",
     duration: "3h 05m",
     episodes: 9,
-    cover: "/images/courses/batik-resist-techniques.jpg",
+    cover: asset("/images/courses/batik-resist-techniques.jpg"),
     overview:
       "Sara teaches traditional resist-dye methods adapted for modern studio practice, from wax application to indigo vat dyeing.",
     overviewFa:
@@ -871,7 +873,7 @@ export const courses: Course[] = [
     level: "Beginner",
     duration: "5h 10m",
     episodes: 14,
-    cover: "/images/courses/weaving-on-a-loom.jpg",
+    cover: asset("/images/courses/weaving-on-a-loom.jpg"),
     overview:
       "Set up a traditional loom and weave your first rug. Matin covers warp, weft, tension, and finishing techniques.",
     overviewFa:
@@ -890,7 +892,7 @@ export const courses: Course[] = [
     level: "Advanced",
     duration: "3h 45m",
     episodes: 11,
-    cover: "/images/courses/ceramic-glaze-color.jpg",
+    cover: asset("/images/courses/ceramic-glaze-color.jpg"),
     overview:
       "Develop a signature glaze palette. Amir covers cobalt formulation, application, and firing for consistent results.",
     overviewFa:

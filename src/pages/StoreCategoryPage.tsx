@@ -21,10 +21,10 @@ export function StoreCategoryPage() {
   const [styleFilter, setStyleFilter] = useState<string>("");
 
   const category = slug ? getCategory(slug) : undefined;
-  if (!category) return <Navigate to="/store" replace />;
+  const validCategory = category ?? categories[0];
 
   const filtered = useMemo(() => {
-    let list = productsByCategory(category.slug);
+    let list = productsByCategory(validCategory.slug);
     if (styleFilter) list = list.filter((p) => p.style === styleFilter);
     switch (sort) {
       case "priceLow": list.sort((a, b) => (a.salePrice ?? a.price) - (b.salePrice ?? b.price)); break;
@@ -33,12 +33,14 @@ export function StoreCategoryPage() {
       case "popular": list.sort((a, b) => b.reviewCount - a.reviewCount); break;
     }
     return list;
-  }, [category.slug, styleFilter, sort]);
+  }, [validCategory.slug, styleFilter, sort]);
 
   const pages = Math.ceil(filtered.length / PER_PAGE);
   const current = Math.min(page, pages || 1);
   const shown = filtered.slice((current - 1) * PER_PAGE, current * PER_PAGE);
-  const relatedCategories = categories.filter((c) => c.slug !== category.slug).slice(0, 4);
+  const relatedCategories = categories.filter((c) => c.slug !== validCategory.slug).slice(0, 4);
+
+  if (!category) return <Navigate to="/store" replace />;
 
   return (
     <>
