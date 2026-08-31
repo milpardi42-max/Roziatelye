@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Patrão — Turn every pattern into a possibility</title>
+    <meta
+      name="description"
+      content="Patrão is a premium creative marketplace for patterns, products, and portfolios. Discover designs, shop curated home décor, learn from artists, and commission custom production."
+    >
+    <meta name="author" content="Patrão">
+    <link rel="canonical" href="/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Patrão — Turn every pattern into a possibility">
+    <meta
+      property="og:description"
+      content="A premium creative marketplace for patterns, products, and portfolios."
+    >
+    <meta property="og:image" content="https://images.pexels.com/photos/3099309/pexels-photo-3099309.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patrão — Turn every pattern into a possibility">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/3099309/pexels-photo-3099309.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=fa-beirut@400,500,600,700&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,500;9..144,1,300;9..144,1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
