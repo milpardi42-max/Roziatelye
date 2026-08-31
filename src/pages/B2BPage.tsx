@@ -1,4 +1,4 @@
-import { Layers, ShoppingBag, Store, ArrowRight, Check } from "lucide-react";
+import { Layers, ShoppingBag, Store, ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Button } from "@/components/ui/Button";

@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Heart, ShoppingBag, Minus, Plus, Star, Truck, Share2 } from "lucide-react";
 import { useI18n, useCurrency } from "@/lib/i18n";
 import { useCart } from "@/lib/cart";
-import { getProduct, getArtist, getCategory, getPattern, productsByPattern, products as allProducts, patterns } from "@/lib/data";
+import { getProduct, getArtist, getCategory, getPattern, products as allProducts, patterns } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProductCard } from "@/components/cards/ProductCard";

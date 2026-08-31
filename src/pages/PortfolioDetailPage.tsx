@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { MapPin, Calendar } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { getPortfolio, getArtist, getPattern, getProduct, type Product } from "@/lib/data";

@@ -1,10 +1,9 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { Star, MapPin, Instagram, Globe } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { getArtist, productsByArtist, patternsByArtist, portfoliosByArtist, type Product } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import { ProductCard } from "@/components/cards/ProductCard";
 import { PatternCard } from "@/components/cards/PatternCard";
 import { PortfolioCard } from "@/components/cards/PortfolioCard";
